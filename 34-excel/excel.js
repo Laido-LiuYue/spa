@@ -1,3 +1,8 @@
+/**
+ * 
+ *
+ * @returns {undefined}
+ */
 $(function(){
   var data=[
     ['login_name', '登录名', 'C(9)', 'N', 'Y', ''],
@@ -11,8 +16,6 @@ $(function(){
   ];
 
   var container = $('.main');
-
-   /* global Handsontable: true */
   var hot = new Handsontable(container.get(0),{
     data: data,
     contextMenu: true, //启用快捷菜单
@@ -20,15 +23,10 @@ $(function(){
     manualColumnResize:true,//允许拖动列
     rowHeaders:true,
     //colHeaders:true
-      colHeaders: [
-          '字段',
-          '说明',
-          '数据类型',
-          '允许为空',
-          '主键',
-          '备注'     
-    ]
+    colHeaders: [
+      '字段','说明','数据类型','允许为空','主键','备注'     
+    ],
   });
 
   return hot;
-})
+});

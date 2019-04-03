@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline';script-src * 'unsafe-inline'">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
   <title>baidu map</title>
   <link rel="stylesheet" href="map.css">
@@ -9,8 +10,8 @@
 </head>
 <body>
   <div id="main"></div>
-  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://api.map.baidu.com/api?v=3.0&ak=MPNgOjHjzl1G8vDIHlyMTT0qDNf4Q0D2"></script>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="map.js"></script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <title>定时器按钮</title>
+  <link type="text/css" href="timer-button.css">
+  <style>
+    .main{
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      //background-color:#66ccff;
+      font-size: 1.3em;                     
+    }
+  </style>
+</head>
+<body>
+<div class="main"></div>
+<input class="add-btn" type="button" value="add timer btn1">
+<input class="add-btn" type="button" value="add timer btn2">
+<input class="del-btn" type="button" value="del timer btn2">
+</body>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="timer-button.js"></script>
+  <script>
+    $(function() {
+      var $btnAdd1=$('input[value="add timer-btn1"]'),
+      var $btnAdd2=$('input[value="add timer-btn2"]'),
+      var $btnDel=$('input[value="del timer-btn2"]');
+      
+      $btnAdd1.click(function(){
+        $timerBtn.init({
+          container:'.main1',
+          title:'发送验证码',
+          time:9,
+          clickHandler:function(){alert('btn1 click')}
+          })
+      });
+      $btnAdd2.click(function(){
+        $timerBtn.init({
+          container:'.main',
+          title:'确定',
+          time:6,
+          clickHandler:function(){alert('btn2 click')}
+        })  
+      });
+    });
+  </script>
+</html>
